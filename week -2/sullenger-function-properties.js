@@ -11,7 +11,7 @@
 
 // myName Function defined
 function myName() {
-  return myName.jason + " " + myName.sully
+  return myName.jason + " " + myName.sully;
 };
 
 // myName function properties
