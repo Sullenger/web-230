@@ -1,6 +1,6 @@
 /*
 ============================================
-; Title:  sullenger-exercise-3.4.js
+; Title:  sullenger-assignment-3.4.js
 ; Author: Jason Sullenger
 ; Date:   15 December 2018
 ; Description: For loop testing if a matching number is found with a random number given
@@ -20,7 +20,7 @@ function randomNumber() {
 /*Tests output for code in sullenger-header.js
 parameters passed are first name, last name, and assignment name*/
 const header = require('../week -2/sullenger-header.js');
-console.log(header.display("Jason" , "Sullenger" , "Exercise 3.4"));
+console.log(header.display("Jason" , "Sullenger" , "Assignment 3.4"));
 
 // Variables defined here
 var exampleVar1= 9;
