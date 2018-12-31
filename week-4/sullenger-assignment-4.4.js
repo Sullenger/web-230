@@ -9,6 +9,12 @@
 
 var states = ["Alabama", "Nebraska", "Iowa", "California", "Nevada"];
 
+function gettingLoopy(){
+  for(var i=0; i< states.length; i++){
+    console.log(states[i]);
+  };
+}
+
 function getState(x,y){
   if(x === y){
     return true;
@@ -21,16 +27,11 @@ console.log(header.display("Jason" , "Sullenger" , "Assignment 4.4"));
 
 // Console logs all the items in the states array
 console.log("\n -- ORIGINAL ARRAY --");
-for(var i=0; i< states.length; i++){
-  console.log(states[i]);
-};
+gettingLoopy(states);
 
 // Console logs all the items in the states array alphabetically
 console.log("\n -- SORTED ARRAY --");
-states.sort();
-for(var i=0; i< states.length; i++){
-  console.log(states[i]);
-};
+gettingLoopy(states.sort());
 
 
 // Calls getState matching with Iowa
