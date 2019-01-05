@@ -2,22 +2,25 @@
 ============================================
 ; Title:  sullenger-assignment-4.4.js
 ; Author: Jason Sullenger
-; Date:   30 December 2018
-; Description:
+; Date:   05 January 2019
+; Description:Loops through array, sorting and filtering the items
 ;===========================================
 */
 
+// states array defined
 var states = ["Alabama", "Nebraska", "Iowa", "California", "Nevada"];
 
+// looping function for states array defined
 function gettingLoopy(){
   for(var i=0; i< states.length; i++){
     console.log(states[i]);
   };
 }
 
-function getState(x,y){
-  if(x === y){
-    return true;
+// filter function defined
+function getState(x,value){
+  if(x === value){
+    return value;
   }
 }
 
@@ -36,3 +39,4 @@ gettingLoopy(states.sort());
 
 // Calls getState matching with Iowa
 console.log("\n -- SELECTED VALUE --");
+console.log(states.filter(function (x) {return getState(x, "Iowa")})[0]);
