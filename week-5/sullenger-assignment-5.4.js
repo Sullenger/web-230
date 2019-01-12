@@ -42,6 +42,26 @@ var composers = [
 
 
 // Console logs the header created in previous weeks
+
 const header = require('../week -2/sullenger-header.js');
 console.log(header.display("Jason" , "Sullenger" , "Assignment 5.4"));
 
+//uses map() to filter composers array by genre
+
+var compGenre = composers.map(function(composer){
+  return "Genre: "+ composer.genre + "\nLastName: "+ composer.lastName;
+});
+
+//uses map() to filter composers array by rating
+
+var compRating = composers.map(function(composer){
+  return "Rating: "+ composer.rating + "\nLastName: "+ composer.lastName;
+    });
+
+//Console logs the new arrays created by map()
+
+console.log("\n--COMPOSER BY RATING--");
+compRating.forEach(function(x){console.log(x + "\n")});
+
+console.log("--COMPOSER BY GENRE--");
+compGenre.forEach(function(x){console.log(x + "\n")});
