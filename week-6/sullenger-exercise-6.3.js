@@ -19,10 +19,4 @@ const header = require('../week -2/sullenger-header.js');
 console.log(header.display("Jason" , "Sullenger" , "Exercise 6.3"));
 
 // Console logs the previously defined object
-console.log(ticketLog);
 console.log("\n{id: " + ticketLog.id + ", name: " + ticketLog.name + ", requestor: " + ticketLog.requestor + "}");
-
-
-
-
-// DO NOT FINISH THIS ASSIGNMENT UNTIL THE CORRECT CONSOLE LOG HAS BEEN SORTED OUT

@@ -13,21 +13,12 @@ console.log(header.display("Jason" , "Sullenger" , "Exercise 6.2"));
 
 // exception handling defined
 try {
-
   var usualFrog = "Ceratophrys cranwelli";
-
   var myFavFrog = "Phyllobates terribilis";
-
 if (usualFrog !== myFavFrog) throw "BadTasteInFrogsException";
-
   console.log("Poison Dart frogs > Pacman frogs");
-
 } catch (err) {
-
   console.log("\nCatch clause: " + err);
-
 } finally {
-
   console.log("Finally clause reached...");
-
 };
