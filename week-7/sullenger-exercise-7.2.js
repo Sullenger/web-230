@@ -42,7 +42,7 @@ new employee(599, "Erick", "Reno", "CEO"),
 // line space between header and data
 console.log("");
 
-// console logs the information passed into the constructon function.
+// console logs the information passed into the constructor function.
 for(var i = 0; i<employeeConstruct.length; i++){
   console.log(employeeConstruct[i].id + " " + employeeConstruct[i].firstName + " " + employeeConstruct[i].lastName + " " + employeeConstruct[i].title);
 };

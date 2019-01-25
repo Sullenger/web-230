@@ -3,7 +3,7 @@
 ; Title:  sullenger-exercise-7.3.js
 ; Author: Jason Sullenger
 ; Date:   24 January 2019
-; Description:
+; Description: Uses javascript to write to the page
 ;===========================================
  -->
 
@@ -17,14 +17,16 @@
   <link rel="stylesheet" href="../site.css">
 </head>
 <body>
-  
-  <script>
-    document.write("<h1>SHOPPING LIST v.1</h1><ol><li>Milk</li><li>Cheese</li><li>Lettuce</li><li>Chicken</li><li>Cereal</li></ol>");
-  </script>
+
+<script>
+  // uses document.write() to write the first version of the shopping list
+  document.write("<h1>SHOPPING LIST v.1</h1><ol><li>Milk</li><li>Cheese</li><li>Lettuce</li><li>Chicken</li><li>Cereal</li></ol>");
+</script>
 
 <div id="list"></div>
 
 <script>
+  // uses innerHTML to write version two of the list to the page
   document.getElementById("list").innerHTML = "<h1>SHOPPING LIST v.2</h1>" +
     "<table>" +
     "<tr>" +
