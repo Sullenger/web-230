@@ -1,0 +1,96 @@
+<!--
+============================================
+; Title:  sullenger-exercise-8.2.js
+; Author: Jason Sullenger
+; Date:   28 January 2019
+; Description:Loops over array and writes the items into an Unordered list
+;===========================================
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 8.2</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+  <style type="text/css">
+    body{
+      font-family: 'Roboto', sans-serif;
+      margin: 10;
+      background:rgb(179, 179, 179);
+    };
+    ul {
+      list-style: none;
+      margin: 0 auto;
+    };
+    h2 {
+      padding: 20px;
+    };
+    .home {
+      color: white;
+    }
+    .style{
+      width: 100%;
+      height: 50px;
+      background: rgb(136, 173, 100);
+      margin: -10px;
+      padding-left: 15px;
+      padding-top: 25px;
+    }
+    .style a {
+      color: white;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="style">
+
+<div><a class="home" href="#">Home</a></div>
+
+</div>
+
+<div id="fruits"></div>
+
+</body>
+
+</html>
+
+<script>
+
+var outputString= "";
+
+var fruits = [
+  {
+      id: 1,
+      type: "Apple"
+  },
+  {
+      id: 2,
+      type: "Banana"
+  },
+  {
+      id: 3,
+      type: "Orange"
+  },
+  {
+      id: 4,
+      type: "Strawberry"
+  },
+  {
+      id: 5,
+      type: "Grape"
+  }
+];
+
+for(i=0; i<fruits.length; i++){
+  outputString += "<li>" + fruits[i].type + "</li>";
+}
+
+document.getElementById('fruits').innerHTML = "<h2>Fruitiest Fruit</h2>" + "<ul>" + outputString + "</ul>";
+
+</script>

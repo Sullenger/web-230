@@ -1,0 +1,134 @@
+<!--
+============================================
+; Title:  sullenger-exercise-8.3.html
+; Author: Jason Sullenger
+; Date:   31 January 2019
+; Description: toggle hides/shows p text and alerts table data on click
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Exercise 8.3</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="../site.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+  <style>
+    body{
+      font-family: 'Roboto', sans-serif;
+      margin: 10;
+    }
+    .topBar{
+      width: 100%;
+      height: 50px;
+      background: rgb(2, 125, 141);
+      margin: -10px;
+      padding-left: 15px;
+      padding-top: 25px;
+    }
+    .topBar a {
+      color: white;
+    }
+    .paddingBody{
+      padding: 20px 20px;
+    }
+    tr:nth-child(2) {background-color: rgb(2, 125, 141);}
+    tr:nth-child(3) {background-color: rgb(4, 145, 161);}
+    tr:nth-child(4) {background-color: rgb(6, 165, 181);}
+    tr:nth-child(5) {background-color: rgb(8, 185, 201);}
+    tr:nth-child(6) {background-color: rgb(10, 205, 221);}
+  </style>
+
+</head>
+<body>
+
+<div class="topBar">
+
+  <div><a class="home" href="#">Home</a></div>
+
+</div>
+
+<div class="paddingBody">
+
+  <h1>Paragraph Title</h1>
+
+  <p class="textBody">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At nostrum ea consectetur, qui ab quos nemo molestiae eveniet, eos, animi neque maxime. Maiores quaerat tempore rerum sit aspernatur libero error incidunt quis consequatur doloribus, facilis fuga nisi quod accusamus magnam soluta dolorum consequuntur iste dolore minima quibusdam nihil! Earum deserunt voluptas atque nulla veritatis quo placeat harum dolor laborum eaque consectetur fuga, similique numquam necessitatibus non. Sequi, ex. Distinctio vel soluta delectus rerum quasi velit, molestiae repellendus quis id animi provident! Debitis, ut! Facilis quisquam qui vero, tempora earum consequuntur at nesciunt quod, maiores error saepe voluptate quo. Vero, nihil.</p>
+
+</div>
+
+<div class="paddingBody">
+
+  <button id="toggle">Toggle</button>
+
+</div>
+
+<!-- Part B -->
+
+<div class="paddingBody">
+
+    <table>
+        <tr class="test">
+          <th>ID</th>
+          <th>Type</th>
+        </tr>
+        <tr>
+          <td id="idOne">1</td>
+          <td id="fruitOne">Kiwi</td>
+        </tr>
+        <tr>
+          <td id="idTwo">2</td>
+          <td id="fruitTwo">Durian</td>
+        </tr>
+        <tr>
+          <td id="idThree">3</td>
+          <td id="fruitThree">Dragon Fruit</td>
+        </tr>
+        <tr>
+          <td id="idFour">4</td>
+          <td id="fruitFour">Lychee</td>
+        </tr>
+        <tr>
+          <td id="idFive">5</td>
+          <td id="fruitFive">Kumquat</td>
+        </tr>
+      </table>
+
+</div>
+
+
+<script type="text/javascript">
+
+$("button").click(function(){
+  $(".textBody").toggle();
+});
+
+$("#idOne").click(function(){
+  alert(document.getElementById("idOne").innerHTML + " " + document.getElementById("fruitOne").innerHTML);
+});
+
+$("#idTwo").click(function(){
+  alert(document.getElementById("idTwo").innerHTML + " " + document.getElementById("fruitTwo").innerHTML);
+});
+
+$("#idThree").click(function(){
+  alert(document.getElementById("idThree").innerHTML + " " + document.getElementById("fruitThree").innerHTML);
+});
+
+$("#idFour").click(function(){
+  alert(document.getElementById("idFour").innerHTML + " " + document.getElementById("fruitFour").innerHTML);
+});
+
+$("#idFive").click(function(){
+  alert(document.getElementById("idFive").innerHTML + " " + document.getElementById("fruitFive").innerHTML);
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!--
+============================================
+; Title:  sullenger-assignment-8.4.js
+; Author: Jason Sullenger
+; Date:   31 January 2019
+; Description: Appends constructed employee list to a table and alerts details when clicked
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 8.4</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- you will need to the href to point to your root directories css file -->
+  <link rel="stylesheet" href="../site.css">
+
+  <style type="text/css">
+    #employee tbody tr:hover {
+      cursor: pointer;
+      background-color: #ffff99;
+    }
+  </style>
+</head>
+<body>
+
+<div id="emps"></div>
+
+<script type="text/javascript">
+
+  // jQuery onClick event
+  // Don't remove this, just add your code to the body of the event (curly braces)
+  $(function () {
+    $("table tr").click(function () {
+      var empId =  $(this).find('td:first').html()
+      getEmployee(empId)
+    })
+  });
+
+var employeeList = "";
+
+// Employee constructor function
+  function employeeConstructor(id, firstName, lastName, title) {
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.title = title;
+}
+
+// Object containing employees for constructor
+var employees = [
+
+new employeeConstructor(123, "Jack", "Johnson", "Dept Manager"),
+new employeeConstructor(234, "Brittany", "Jane", "Regional Manager"),
+new employeeConstructor(345, "Tim", "Thompson", "Assistant to the Regional Manager"),
+new employeeConstructor(456, "Reese", "Sullivan", "Elevator Operator"),
+new employeeConstructor(567, "Zane", "McDonald", "Security"),
+
+];
+
+// function checking employee id's against passed parameters
+function getEmployee(empId){
+  for(i=0; i<employees.length; i++){
+    if (employees[i].id==empId){
+      alert(employees[i].id + " " + employees[i].firstName + " " + employees[i].lastName + " " + employees[i].title)
+    }
+  }
+}
+
+// Loop adding employees to the table to be appended
+for(i=0; i<employees.length; i++){
+  employeeList += "<tr><td>" + employees[i].id + "</td><td>" + employees[i].firstName + "</td><td>" + employees[i].lastName + "</td><td>" + employees[i].title + "</td></tr>";
+}
+
+var output = "<h1>Employee List</h1>" +
+      "<table class='tableHover'>" +
+        "<thead>" +
+        "<tr>" +
+        "<th>Id</th><th>First Name</th><th>Last Name</th><th>Title</th>" +
+        "</tr>" +
+        "</thead>" +
+        "<tbody>" +
+        employeeList +
+        "</tbody>" +
+        "</table>";
+
+// Sending table to div ID emps
+document.getElementById("emps").innerHTML = output;
+
+</script>
+</body>
+</html>
